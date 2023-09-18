@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+    <header>
+        <!--boton-->
+        <button type="button" id="modoOscuroBtn" class="modo-oscuro" onclick="cambiarModo()">Oscuro / Claro</button>
+    </header>
+    <div class="cuerpo">
+        <!--Formulario para el ingreso de datos-->
+        <div class="formulario-cont">
+            <form method="POST" class="formulario" id="formulario">
+
+                <!--parte de textos-->
+                <!--ingreso de nombre-->
+                <div class="nombre">
+                    <label for="nombre" class="nombre-texto titulo">Nombre completo:</label>
+                    <br>
+                    <input type="text" id="nombre" name="nombre" class="nombre-ingreso" required>
+                    <br>
+                </div>
+
+                <!--ingreso de cédula-->
+                <div class="cedula">
+                    <label for="cedula" class="cedula-texto titulo">Cédula:</label>
+                    <br>
+                    <input type="text" class="cedula-ingreso" id="cedula" name="cedula" required>
+                    <br>
+                </div>
+
+
+                <!--ingreso de correo-->
+                <div class="correo">
+
+                    <label for="correo" class="correo-texto titulo">Correo:</label>
+                    <br>
+                    <input type="email" id="correo" name="correo" class="correo-ingreso" required>
+                    <br>
+                </div>
+
+
+                <!--ingreso de telefono-->
+                <div class="telefono">
+                    <label for="telefono" class="telefono-texto titulo">Teléfono:</label>
+                    <br>
+                    <input type="text" id="telefono" name="telefono" class="telefono-ingreso" required>
+                    <br>
+                </div>
+
+                <!--ingreso de direccion-->
+                <div class="direccion">
+                    <label for="direccion" class="direccion-texto titulo">Dirección:</label>
+                    <br>
+                    <input type="text" id="direccion" name="cireccion" class="direccion-ingreso" required>
+                </div>
+
+
+                <!--parte de seleccion-->
+
+
+                <!--ingreso de edad-->
+                <div class="edad">
+                    <label for="edad" class="edad-texto titulo">Fecha de nacimiento:</label>
+                    <br>
+                    <input type="date" id="edad" name="edad" class="edad-ingreso" required>
+                    <br>
+                </div>
+
+                <!--ingreso de genero-->
+                <div class="genero">
+                    <label for="genero" class="genero_texto titulo">Género:</label>
+                    <select name="genero" id="genero" class="genero-seleccion" required>
+                        <option value="seleccion"> </option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="boton">
+                    <button type="submit" class="enviar">Enviar</button>
+                </div>
+                <p id="resultado" class="resultado"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
